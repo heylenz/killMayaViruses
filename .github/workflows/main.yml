@@ -89,7 +89,7 @@ jobs:
       - name: Download Linux
         uses: actions/download-artifact@v1
         with:
-          name: killMayaViruses
+          name: killMayaViruses-linux
 
       - name: Download Mac
         uses: actions/download-artifact@v1
@@ -114,8 +114,8 @@ jobs:
 
       - name: Zip
         run: |
-          tar -C killMayaViruses -pczvf killMayaViruses-macos.tar.gz killMayaViruses
-          tar -C kill-maya-viruses -pczvf kill-maya-viruses-linux.tar.gz killMayaViruses
+          tar -C killMayaViruses-macos -pczvf killMayaViruses-macos.tar.gz killMayaViruses
+          tar -C killMayaViruses-linux -pczvf kill-maya-viruses-linux.tar.gz killMayaViruses
           zip --junk-paths killMayaViruses-windows ./killMayaViruses-windows/killMayaViruses.exe
       - name: Append Binary
         uses: actions/upload-release-asset@v1
