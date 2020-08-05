@@ -30,27 +30,30 @@ def check_maya_file(filename):
         line = f.readline()
         while True:
             if not line:
-                break
-            elif line.startswith('//'):
-                pass
+                break 
             else:
                 if re.search('createNode script', line):
                     lines = []
                     lines.append(line)
-                    while True:
-                        temp = f.readline()
-                    
-                        if re.search('createNode', temp) and not re.search('createNode script', temp):
-                            break
+                    while True:                        
+                        temp = f.readline()                  
+                        if not re.search(r'\t',temp) and not re.search('createNode script', temp):
+                            break      
                         else:
                             lines.append(temp)
+     
+
                     find_script_block.append(lines)
+
 
             line = f.readline()
     shit_script_block = []
     for x in find_script_block:
-        if not [k for k in x if re.search('\"playbackOptions -min \d* -max \d* -ast \d* -aet \d* \";',k)]:
+        if not [k for k in x if re.search('playbackOptions',k)]:
             shit_script_block.extend(x)
+
+    # for i in shit_script_block:
+    #     print(i)
     return shit_script_block
 
 
