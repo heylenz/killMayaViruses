@@ -27,7 +27,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v1
         with:
-          name: killMayaViruses
+          name: killMayaViruses-windows
           path: dist/killMayaViruses.exe
 
   macOS-build:
@@ -52,7 +52,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v1
         with:
-          name: killMayaViruses
+          name: killMayaViruses-macos
           path: dist/killMayaViruses
 
   ubuntu-build:
@@ -78,7 +78,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v1
         with:
-          name: killMayaViruses
+          name: killMayaViruses-linux
           path: dist/killMayaViruses
 
   release:
