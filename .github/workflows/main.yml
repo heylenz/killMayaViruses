@@ -115,7 +115,7 @@ jobs:
       - name: Zip
         run: |
           tar -C killMayaViruses-macos -pczvf killMayaViruses-macos.tar.gz killMayaViruses
-          tar -C killMayaViruses-linux -pczvf kill-maya-viruses-linux.tar.gz killMayaViruses
+          tar -C killMayaViruses-linux -pczvf killMayaViruses-linux.tar.gz killMayaViruses
           zip --junk-paths killMayaViruses-windows ./killMayaViruses-windows/killMayaViruses.exe
       - name: Append Binary
         uses: actions/upload-release-asset@v1
