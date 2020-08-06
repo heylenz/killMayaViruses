@@ -1,8 +1,8 @@
 """
-莫名其妙的普天同庆,这个是嫌TD不够忙嘛！
+Tools to kill maya script virus
 auth: yinhailin
 email: hailin.yin@outlook.com
-用法: python main.py 
+Usage:  python main.py folder path
 """
 import os
 import re
