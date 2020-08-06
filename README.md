@@ -5,7 +5,9 @@
 重要的事情说三遍
 
 此工具会删除maya中 所有的 以 createNode script 的节点及设置
+
 此工具会删除maya中 所有的 以 createNode script 的节点及设置
+
 此工具会删除maya中 所有的 以 createNode script 的节点及设置
 
 如果单位中有特殊的 需求，请慎用。本人不对软件造成的后果负责(自动备份)
