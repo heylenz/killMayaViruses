@@ -74,7 +74,7 @@ def fixed_maya_file(filename):
     shutil.copy2(filename, backup)
 
     with open(backup, encoding='utf-8', errors='ignore') as fread:
-        with open(filename, "w") as fwrite:
+        with open(filename, "w", encoding='utf-8', errors='ignore') as fwrite:
 
             line = fread.readline()
             while True:
