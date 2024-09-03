@@ -87,17 +87,17 @@ jobs:
 
     steps:
       - name: Download Linux
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: killMayaViruses-linux
 
       - name: Download Mac
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: killMayaViruses-macos
 
       - name: Download Windows
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: killMayaViruses-windows
 
